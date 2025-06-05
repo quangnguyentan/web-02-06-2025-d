@@ -1,25 +1,21 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "target": "ES2022",
-    "lib": ["ES2023"],
-    "module": "ESNext",
+    "composite": true, // Required for project references
     "skipLibCheck": true,
-
-    /* Bundler mode */
+    "module": "ESNext",
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-
-    /* Linting */
+    "allowJs": true,
+    "noEmit": false, // Required for composite projects
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "target": "ESNext",
+    "types": ["node"],
+    "outDir": "./dist-node-temp" // Important: Prevents overwriting config files
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts", "postcss.config.js"], // Files that might need TS processing
+  "exclude": [] // Exclude any files that shouldn't be compiled (like plain JS config files)
 }

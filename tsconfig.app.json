@@ -10,14 +10,14 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": true, // Keep this if you want strict type-only imports
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
+    // "erasableSyntaxOnly": true, // <--- REMOVE THIS LINE
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },

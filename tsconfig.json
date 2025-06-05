@@ -1,7 +1,27 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": true,
+    "skipLibCheck": true, // Use with caution, but often helpful initially
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true, // Enable strict mode for better type safety
+    "noImplicitAny": true, // Prevents implicit any types
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler", // Or "node16", "nodenext"
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true, // If Vite/bundler handles output
+    "jsx": "react-jsx",
+    "baseUrl": ".", // Crucial for @/ aliases
+    "paths": {
+      "@/*": ["./src/*"] // Adjust if your source is in a different directory
+    },
+    "verbatimModuleSyntax": true // Enforce type-only imports
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"], // Explicitly exclude node_modules
+  "references": [{ "path": "./tsconfig.node.json" }] // If you have a separate tsconfig for node
 }
