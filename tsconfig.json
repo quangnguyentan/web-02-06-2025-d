@@ -19,7 +19,7 @@
     "paths": {
       "@/*": ["./src/*"] // Adjust if your source is in a different directory
     },
-    "verbatimModuleSyntax": true // Enforce type-only imports
+    "verbatimModuleSyntax": false // Enforce type-only imports
   },
   "include": ["src"],
   "exclude": ["node_modules"], // Explicitly exclude node_modules
