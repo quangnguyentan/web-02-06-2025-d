@@ -56,15 +56,20 @@ const MatchStreamPage: React.FC<MatchStreamPageProps> = ({
         <main className="lg:mx-44 xl:mx-32">
           {/* Margin to avoid overlap with side ads */}
           <Breadcrumbs match={match} />
-          <div className="flex flex-col lg:flex-row gap-4">
+          <div className="md:hidden">
+            <MatchInfoBar match={match} />
+          </div>
+          <div className="flex flex-col lg:flex-row md:gap-4 sm:gap-0">
             {/* Left Column: Video + Match Info + Related */}
             <div className="lg:w-2/3 flex-shrink-0">
               <VideoPlayer
                 videoTitle={`${match.teamA.name} vs ${match.teamB.name}`}
                 posterUrl="https://picsum.photos/seed/baseballgame/1280/720" // Placeholder poster
               />
-              <MatchInfoBar match={match} />
-              <div className="mt-1 sm:hidden md:block">
+              <div className="hidden md:block">
+                <MatchInfoBar match={match} />
+              </div>
+              <div className="mt-1 hidden md:block">
                 <SportSection
                   title="CÁC TRẬN ĐẤU KHÁC"
                   matches={relatedMatches}
@@ -75,7 +80,7 @@ const MatchStreamPage: React.FC<MatchStreamPageProps> = ({
             {/* Right Column: Chat + Replays */}
             <div className="lg:w-1/3 flex-shrink-0">
               <ChatPanel />
-              <div className="mt-1 md:hidden sm:block">
+              <div className="mt-1 md:hidden">
                 <SportSection
                   title="CÁC TRẬN ĐẤU KHÁC"
                   matches={relatedMatches}
