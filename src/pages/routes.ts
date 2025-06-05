@@ -1,4 +1,4 @@
-import type { RouteObject } from "react-router-dom";
+import { RouteObject } from "react-router-dom";
 
 const routeFiles = import.meta.glob<{ default: RouteObject[] }>(
   "./**/route.tsx",

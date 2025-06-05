@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import type { RouteObject } from "react-router-dom";
+import { RouteObject } from "react-router-dom";
 import PublicPageWrapper from "./wrapper";
 const HomePage = lazy(() => import("../Home/index"));
 const LivePage = lazy(() => import("../Live/index"));
