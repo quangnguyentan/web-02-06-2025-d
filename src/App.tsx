@@ -1,4 +1,5 @@
-import { Route, RouteObject, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import type { RouteObject } from "react-router-dom";
 import routes from "./pages/routes";
 import { Suspense } from "react";
 
