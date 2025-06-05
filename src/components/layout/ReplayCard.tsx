@@ -13,10 +13,12 @@ const ReplayCard: React.FC<ReplayCardProps> = ({
   variant = "default",
 }) => {
   const navigate = useNavigate();
+  const targetUrl = replay.url || "/replay";
+
   if (variant === "compact") {
     return (
       <div
-        onClick={() => navigate(replay.url)}
+        onClick={() => navigate(targetUrl)}
         className="flex items-center space-x-3 group p-1.5 hover:bg-slate-700/50 rounded-md transition-colors duration-150 cursor-pointer"
       >
         <div className="relative flex-shrink-0">
